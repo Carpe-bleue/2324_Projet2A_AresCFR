@@ -24,7 +24,7 @@ void strategie()
 {
 	Style_btn_confirm();
 	lv_style_init(&btn_strat_orginal);
-	lv_style_set_bg_color(&btn_strat_orginal, lv_palette_main(LV_PALETTE_YELLOW));
+	lv_style_set_bg_color(&btn_strat_orginal, lv_palette_main(LV_PALETTE_AMBER));
 	lv_style_set_radius(&btn_strat_orginal, 80);
 	lv_style_set_width(&btn_strat_orginal, BTN_WIDTH);
 	lv_style_set_height(&btn_strat_orginal, BTN_HEIGHT);
@@ -155,7 +155,7 @@ static void event_btn(lv_event_t * e)
     if(confirm == 0 && Index == BTN_NUMBER)
     {
     	confirm++;
-    	lv_color_t r = lv_palette_main(LV_PALETTE_NONE);
+    	lv_color_t r = lv_palette_main(LV_PALETTE_PINK);
     	fullr = r.full;
     	for(int i = 0;i<BTN_NUMBER;i++)
     	{
@@ -175,7 +175,7 @@ static void event_btn(lv_event_t * e)
 
     		if(i%2 == 0)
     		{
-    			lv_obj_set_style_bg_color(obj, lv_palette_main(LV_PALETTE_YELLOW), 0);
+    			lv_obj_set_style_bg_color(obj, lv_palette_main(LV_PALETTE_AMBER), 0);
     		}
     		else
     		{
@@ -197,7 +197,7 @@ static void event_btn(lv_event_t * e)
     	    {
     	    	if(i%2 == 0)
     	    	{
-    	    		lv_obj_set_style_bg_color(obj, lv_palette_main(LV_PALETTE_YELLOW), 0);
+    	    		lv_obj_set_style_bg_color(obj, lv_palette_main(LV_PALETTE_AMBER), 0);
     	    	}
     	    	else
     	    	{
@@ -206,7 +206,7 @@ static void event_btn(lv_event_t * e)
     	    }
     	    else
     	    {
-    	    	lv_obj_set_style_bg_color(obj, lv_palette_main(LV_PALETTE_NONE), 0);
+    	    	lv_obj_set_style_bg_color(obj, lv_palette_main(LV_PALETTE_PINK), 0);
     	    }
     	}
     }

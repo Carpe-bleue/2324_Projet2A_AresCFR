@@ -57,7 +57,7 @@ typedef int bool;
 
 #ifdef ISPHOBOS
 	#define ODOMETRY_RADIUS  26 //26.9811 28.2
-	#define ENTRAXE_ODOMETRY 275.9  //286.13 305
+	#define ENTRAXE_ODOMETRY 272.4  //286.13 305
 	#define ODOMETRY_REFRESH 0.01 //10ms
 #endif
 #ifdef ISDEIMOS
