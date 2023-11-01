@@ -20,8 +20,7 @@ void setup()
   // is always my  FTDI adaptor, so I open Serial.list()[0].
   // On Windows machines, this generally opens COM1.
   // Open whatever port is the one you're using.
-  String portName = Serial.list()[0];
-  myPort = new Serial(this, portName, 115200);
+  myPort = new Serial(this, "COM11", 115200);
   myPort.buffer(32);
   myPort.write(0xAA); //<>//
 }
@@ -42,8 +41,8 @@ void draw()
   for(int i=0; i<16 ; i++){
     float x_A = cos(angle_btwn_line*i)*30;
     float y_A = sin(angle_btwn_line*i)*30;
-    float x_B = cos(angle_btwn_line*i)*(abs(lidar_value[i]/2));
-    float y_B = sin(angle_btwn_line*i)*(abs(lidar_value[i]/2));
+    float x_B = cos(angle_btwn_line*i)*(abs(lidar_value[i]/2)) + x_A;
+    float y_B = sin(angle_btwn_line*i)*(abs(lidar_value[i]/2)) + y_A;
     line(origine_x + x_A, origine_y + y_A, origine_x + x_B, origine_y + y_B);
   }
 }
